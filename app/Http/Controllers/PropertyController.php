@@ -9,13 +9,26 @@ use Illuminate\Http\Request;
 class PropertyController extends Controller
 {
 	/**
+	 * Display a search form to find booking dates
+	 *
+	 * @param \Illuminate\Http\Request $request
+	 */
+	public function search(Request $request){
+		return view('properties.search_form');
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
-		$properties = Property::all();
+		if (empty($request->get('start_date')) && empty($request->get('end_date'))) {
+			$properties = Property::all();
+		} else {
+		}
+
 		return view('properties.index', ['properties' => $properties]);
 	}
 

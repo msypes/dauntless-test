@@ -15,4 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('properties/search', 'PropertyController@search');
 Route::resource('properties', 'PropertyController');
+
+Route::get('bookingdates/search', 'BookingDateController@search');
+Route::resource('bookingdates', 'BookingDateController');
+
