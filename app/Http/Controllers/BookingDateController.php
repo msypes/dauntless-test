@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\BookingDate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookingDateController extends Controller
 {
@@ -74,9 +75,17 @@ class BookingDateController extends Controller
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		$foo = 'bar';
+		$uid = Auth::id();
+
+		$dates_to_book = $request->get('book_date');
+		if(!empty($dates_to_book)){
+			BookingDate::whereIn('id', $dates_to_book)
+				->update(['booked_by' => $uid, 'booked_when' => date('Y-m-d H:i:s')]);
+		}
+
+		return redirect('bookingdates');
 	}
 
 	/**
