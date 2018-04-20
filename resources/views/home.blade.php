@@ -14,7 +14,13 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <p>You are logged in!</p>
+                        <p>Choose from the following:</p>
+                        <ul class="navbar-nav mr-auto">
+                            <li><a href="{{url('properties')}}">View Properties</a></li>
+                            <li><a href="{{url('properties/create')}}">Add A Property</a></li>
+                            <li><a href="{{url('bookingdates/search')}}">Search Booking Dates</a></li>
+                        </ul>
                 </div>
             </div>
         </div>

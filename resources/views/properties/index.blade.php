@@ -1,18 +1,10 @@
-<?php
-/**
- * @file show.blade.php
- * @author Michael A. Sypes <michael@sypes.org>
- * @project dauntless
- *
- * @abstract
- */
-?>
-        <!DOCTYPE html>
-<html>
-<head>
+@extends('layouts.app')
+
+@section('title')
     <title>Current Properties</title>
-</head>
-<body>
+@stop
+
+@section('content')
 <ul>
     @foreach($properties as $property)
         <li>Name: <a href="/properties/{{ $property->id }}">{{ $property->name }}</a><br>
@@ -28,7 +20,5 @@
             @endif
        </li>
     @endforeach
-</ul>
-</body>
-</html>
+@stop
 

@@ -1,18 +1,10 @@
-<?php
-/**
- * @file show.blade.php
- * @author Michael A. Sypes <michael@sypes.org>
- * @project dauntless
- *
- * @abstract
- */
-?>
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layouts.app')
+
+@section('title')
     <title>Available Dates</title>
-</head>
-<body>
+@stop
+
+@section('content')
 <h1>Select Dates to Book</h1>
 <p><strong>Please note that you cannot cancel any bookings at this time.</strong></p>
 
@@ -52,6 +44,4 @@
     <div class="input-wrapper"><input type="submit"name="submit" value="Book Selected Dates"></div>
 
 </form>
-</body>
-</html>
-
+@stop

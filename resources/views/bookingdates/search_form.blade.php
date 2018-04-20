@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layouts.app')
+
+@section('title')
     <title>Find A Property To Book</title>
+@stop
 </head>
 <body>
-<h1>Find A Property To Book By Date</h1>
+@section('content')
+    <h1>Find A Property To Book By Date</h1>
 <form method="get" action="{{ url('bookingdates') }}">
     {{csrf_field()}}
     <div class="input-wrapper">
@@ -15,5 +17,4 @@
     </div>
     <div class="input-wrapper"><input type="submit"name="submit" value="Find Available Dates"></div>
 </form>
-</body>
-</html>
+@stop
