@@ -10,11 +10,10 @@
         <!DOCTYPE html>
 <html>
 <head>
-    <title>Property {{ $property->id }}</title>
+    <title{{ $property->name }}</title>
 </head>
 <body>
-<h1>property {{ $property->id }}</h1>
-<p>Name: {{ $property->name }}</p>
+<h1>{{ $property->name }}</h1>
 <p>Address: {{ $property->address }}</p>
 <p>Description: {{ $property->description }}</p>
 @if(!empty($property->image))
@@ -29,6 +28,9 @@
     <p>This property has no available dates.</p>
 @endif
 
+@if(Auth::id() === $property->owner)
+    <p><a href="/properties/{{ $property->id }}/edit">Edit this property</a></p>
+@endif
 
 </body>
 </html>

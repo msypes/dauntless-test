@@ -26,11 +26,12 @@ class BookingDateController extends Controller
 	{
 		$start_date = (empty($request->get('start_date')))? '' : $request->get('start_date');
 		$end_date = (empty($request->get('end_date')))? '' : $request->get('end_date');
-		//if (empty($request->get('start_date')) && empty($request->get('end_date'))) {
-			$dates = BookingDate::all()->sortBy( 'property_id' );
-//		} else {
-//
-//		}
+		if (empty($request->get('start_date')) && empty($request->get('end_date'))) {
+			return redirect('/bookingdates/search');
+		}
+
+		$dates = BookingDate::all()->sortBy( 'property_id' );
+
 
 		// Reorganize for the display
 		$display = [];
@@ -84,6 +85,8 @@ class BookingDateController extends Controller
 			BookingDate::whereIn('id', $dates_to_book)
 				->update(['booked_by' => $uid, 'booked_when' => date('Y-m-d H:i:s')]);
 		}
+
+		// Note: This does not have to ability to cancel bookings.
 
 		return redirect('bookingdates');
 	}

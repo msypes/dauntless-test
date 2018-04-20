@@ -20,6 +20,7 @@ class CreatePropertiesTable extends Migration
             $table->string('address');
             $table->string('description');
             $table->string('image')->nullable();
+            $table->integer('owner');
         });
     }
 
