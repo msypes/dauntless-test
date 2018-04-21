@@ -1,0 +1,62 @@
+/** Custom Styling For Dauntless Test **/
+
+.dauntless-nav > li{
+  margin: auto .3em;
+}
+#properties-list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#properties-list > li {
+  margin: 1em;
+  border: solid 1px #333333;
+  border-radius: 10px;
+  box-shadow: #666666 3px 3px 5px;
+  padding: 1em;
+}
+
+.property-detail{
+  text-align: center;
+}
+
+.dauntless-form{
+  margin: auto;
+  text-align: left;
+  display: inline-block;
+  min-width: 50%;
+}
+
+.dauntless-form .input-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #999999;
+  margin: .5em 0;
+  padding: .5em 0;
+}
+
+.dauntless-form .input-wrapper:last-child{
+  border-bottom: none;
+}
+
+.dauntless-form input, .dauntless-form textarea{
+  width: 90%;
+  margin: auto;
+}
+@media(min-width: 350px){
+  .dauntless-form input, .dauntless-form textarea{
+    width: 60%;
+    margin: unset;
+  }
+}
+
+.property-dates{
+  list-style: none;
+}
+
+.property-dates .unavailable {
+  text-decoration: line-through;
+  color: #888888;
+}

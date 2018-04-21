@@ -7,7 +7,7 @@
 <body>
 @section('content')
     <h1>Find A Property To Book By Date</h1>
-<form method="get" action="{{ url('bookingdates') }}">
+<form method="get" action="{{ url('bookingdates') }}" class="dauntless-form">
     {{csrf_field()}}
     <div class="input-wrapper">
         <label for="start_date">Start Date</label> <input type="date" name="start_date" id="start_date" value="" required/>

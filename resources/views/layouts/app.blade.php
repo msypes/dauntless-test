@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -33,7 +34,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mr-auto dauntless-nav">
                         <li><a href="{{url('properties')}}">View Properties</a></li>
                         <li><a href="{{url('properties/create')}}">Add A Property</a></li>
                         <li><a href="{{url('bookingdates/search')}}">Search Booking Dates</a></li>

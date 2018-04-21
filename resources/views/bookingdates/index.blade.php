@@ -33,7 +33,7 @@
                         </label>
                     @endif
                     @if($date['booked_by'] === Auth::id())
-                            <span class="you_booked">You booked this date</span>
+                            <em class="you_booked">You booked this date</em>
                     @endif
                 </li>
             @endforeach
