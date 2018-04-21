@@ -1,59 +1,52 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# About this repo
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Dauntless Test was written as a assessment exercise for a potential job.
 
-## About Laravel
+## Here is the original assignment
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+### PHP Developer test
+### Updated Apr 18, 2018 
+Have a CRUD functionality for a property name, address, description, image
+Add availability for a property. start_date, end_date
+User must be able to find accommodations available between dates chosen. Response must include number of days that each property is available, for dates provided.
+Ex: Between 15 April - 25 April some properties will be available for 2 days, as availability of those is 10-17th April.
+User must be able to book an accommodation for number of days provided. You must handle errors when users are cheeky 😃 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+Optional:
+* Create basic User Interface with CSS framework of your choice that consumes your API
+* Create User Authentication
+* Find properties by distance (3 miles) provided from a location (latitude: xxx, longitude: xxx)
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+Add any tables and models you think are required.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+--------------------
 
-## Laravel Sponsors
+## How to use this repository
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+1. Install with git
+1. Create a database, user, and password to your liking
+1. Copy the `.env.example` file to `.env` and put your database credentials there.
+1. From the root directory run `php artisan migrate`. This will create the necessary tables for you.
+1. Do whatever you usually do to serve up the site and point your browser to it.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
+In order to do anything, you need to login as a user, so the first thing you'll need to do is register one.
 
-## Contributing
+I recommend creating multiple users so you can see how things may look for different people.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Once logged in, create one or more properties with booking dates.
 
-## Security Vulnerabilities
+As another user do the same.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Each user can see all properties and book available dates.
+Users can also modify the properties they have created.
 
-## License
+**Enjoy!**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Additional information
+I used Laravel's semi-built-in user authentication system for this exercise, and just extended my Blade templates from the stock ones Laravel generates in the interest of time.
+
+I did not bother to provide the ability to delete properties, and users cannot change/cancel/delete booking dates, purely in the interest of time.
+
+If you would like to see additional code samples, I have more hre on GitHub as well as [BitBucket](https://bitbucket.org/msypes/), where you can look at both repositories and snippets.
